@@ -17,8 +17,8 @@ In order to see the data on the web application, follow the setup at [Greenspark
 Once the ui is up aswell you will see 3 widgets that can be customized. 
 
 There are at the moment two endpoints for the products: update and getAll, since creating the other CRUD operations was out of scope for this project. 
-Additionally for the sake of the requirements I added a Number for the mondo _ids, however this is really not something that is supposed to be done! UUID is always the way to go - this is only for it to follow the pdf provided. 
+Additionally for the sake of the requirements I added a Number for the mongo _ids, however this is really not something that is supposed to be done! UUID is always the way to go - this is only to follow the pdf provided. 
 
-**Please note that this is my first ever Nest project - although I had fun playing with it, it might have some flaws that are unknown to me that could've been avoided.
+**Please note that this is my first ever Nest project - although I had fun playing with it, it might have some flaws that are unknown to me that could've been avoided.**
 
-Have fun :)**
+**Have fun :)**
