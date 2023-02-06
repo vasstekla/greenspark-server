@@ -1,4 +1,4 @@
-import { getMockReq, getMockRes } from '@jest-mock/express'
+import { getMockReq, getMockRes } from '@jest-mock/express';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DatabaseModule } from '../database.module';
 import { ProductsController } from './products.controller';
@@ -39,10 +39,10 @@ describe('ProductsController', () => {
   it("calling getProducts method", () => {
     controller.getProducts(res);
     expect(spyOnGetAllProducts).toHaveBeenCalled();
-  })
+  });
 
   it("calling updateProduct method", () => {
-    controller.updateProduct(res, 1, {
+    controller.updateProduct(res, 0, {
       type: '',
       amount: 0,
       action: '',
@@ -51,5 +51,5 @@ describe('ProductsController', () => {
       selectedColor: ''
     });
     expect(spyOnUpdateProduct).toHaveBeenCalled();
-  })
+  });
 });
