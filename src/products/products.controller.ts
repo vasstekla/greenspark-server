@@ -17,7 +17,7 @@ export class ProductsController {
         product,
       });
     } catch (err) {
-      return response.status(err.status).json(err.response);
+      return response.status(err.status);
     }
   }
   @Get()
@@ -28,7 +28,7 @@ export class ProductsController {
         message: 'Returning products successfully', products,
       });
     } catch (err) {
-      return response.status(err.status).json(err.response);
+      return response.status(err.status);
     }
   }
 }

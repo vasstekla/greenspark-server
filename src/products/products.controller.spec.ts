@@ -1,4 +1,3 @@
-import { getMockReq, getMockRes } from '@jest-mock/express';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DatabaseModule } from '../database.module';
 import { ProductsController } from './products.controller';
@@ -13,7 +12,7 @@ const createMocks = _createMocks as (
   // @ts-ignore: Fixing this: https://github.com/howardabrams/node-mocks-http/issues/245
 ) => Mocks<NextApiRequest, NextApiResponse>;
 
-const { req, res } = createMocks({
+const { res } = createMocks({
   method: 'GET',
 });
 

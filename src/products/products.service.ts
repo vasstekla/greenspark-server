@@ -18,9 +18,6 @@ export class ProductsService {
   }
   async getAllProducts(): Promise<IProduct[]> {
     const products = await this.productModel.find();
-    if (!products || products.length == 0) {
-      throw new NotFoundException('Products not found');
-    }
     return products;
   }
 }
