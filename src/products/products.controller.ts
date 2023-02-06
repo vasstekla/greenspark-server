@@ -3,11 +3,11 @@ import { ProductsService } from './products.service';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { Response } from 'express';
 
-@Controller()
+@Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) { }
 
-  @Put('product/:id')
+  @Put(':id')
   async updateProduct(@Res() response, @Param('id') productId: number,
     @Body() updateProductDto: UpdateProductDto) {
     try {
@@ -20,7 +20,7 @@ export class ProductsController {
       return response.status(err.status).json(err.response);
     }
   }
-  @Get('products')
+  @Get()
   async getProducts(@Res() response: Response) {
     try {
       const products = await this.productsService.getAllProducts();
