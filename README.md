@@ -9,8 +9,8 @@ The server has a Nest + Typescript codebase, and the data is stored in MongoDB -
 In order to start the project locally 
 
 1. Run your MongoDB and copy the connection string. Paste it into the database.module.ts instead of 'mongodb://127.0.0.1:27017'.
-2. Run seed.ts `npx ts-node .\src\seed.ts` in order to fill your database with the 3 initial widgets.
-3. Run `npm i` followed by `npm start` and you should have a server listening on port [Localhost 3001](http://localhost:3000/)
+2. Run `npm i` followed by `npx ts-node .\src\seed.ts` in order to fill your database with the 3 initial widgets.
+3. Run `npm start` and you should have a server listening on port [Localhost 3001](http://localhost:3000/)
 4. You can also run the controller test cases with the command `npm test` - but please note the process will not stop after running the test cases, you will have to exit manually. This is due to some async calls which is not yet fixed. 
 
 In order to see the data on the web application, follow the setup at [Greenspark ui](https://github.com/vasstekla/greenspark).
