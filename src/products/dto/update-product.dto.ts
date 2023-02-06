@@ -1,4 +1,29 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateProductDto } from './create-product.dto';
+import { IsNotEmpty, IsNumber, IsString, IsBoolean, MaxLength } from "class-validator";
+export class UpdateProductDto {
+    @IsString()
+    @MaxLength(30)
+    @IsNotEmpty()
+    readonly type: string;
 
-export class UpdateProductDto extends PartialType(CreateProductDto) { }
+    @IsNumber()
+    @IsNotEmpty()
+    readonly amount: number;
+
+    @IsString()
+    @MaxLength(30)
+    @IsNotEmpty()
+    readonly action: string;
+
+    @IsBoolean()
+    @IsNotEmpty()
+    readonly active: boolean;
+
+    @IsBoolean()
+    @IsNotEmpty()
+    readonly linked: boolean;
+
+    @IsString()
+    @MaxLength(30)
+    @IsNotEmpty()
+    readonly selectedColor: string;
+}
