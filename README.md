@@ -1,73 +1,24 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# My interview application @Greenspark
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project is a small full-stack coding challenge based on some requirements and a Figma design. 
+You can find the ui side of this application at [Greenspark ui](https://github.com/vasstekla/greenspark).
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Nest.js
 
-## Description
+The server has a Nest + Typescript codebase, and the data is stored in MongoDB - connected to with the help of Mongoose. 
+In order to start the project locally 
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+1. Run your MongoDB and copy the connection string. Paste it into the database.module.ts instead of 'mongodb://127.0.0.1:27017'.
+2. Run seed.ts `npx ts-node .\src\seed.ts` in order to fill your database with the 3 initial widgets.
+3. Run `npm i` followed by `npm start` and you should have a server listening on port [Localhost 3001](http://localhost:3000/)
+4. You can also run the controller test cases with the command `npm test` - but please note the process will not stop after running the test cases, you will have to exit manually. This is due to some async calls which is not yet fixed. 
 
-## Installation
+In order to see the data on the web application, follow the setup at [Greenspark ui](https://github.com/vasstekla/greenspark).
+Once the ui is up aswell you will see 3 widgets that can be customized. 
 
-```bash
-$ npm install
-```
+There are at the moment two endpoints for the products: update and getAll, since creating the other CRUD operations was out of scope for this project. 
+Additionally for the sake of the requirements I added a Number for the mondo _ids, however this is really not something that is supposed to be done! UUID is always the way to go - this is only for it to follow the pdf provided. 
 
-## Running the app
+**Please note that this is my first ever Nest project - although I had fun playing with it, it might have some flaws that are unknown to me that could've been avoided.
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Have fun :)**
