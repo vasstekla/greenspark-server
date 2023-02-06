@@ -52,8 +52,4 @@ describe('ProductsController', () => {
     });
     expect(spyOnUpdateProduct).toHaveBeenCalled();
   })
-
-  afterAll(async done => {
-    //after done do something to break the process
-  });
 });
